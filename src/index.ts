@@ -1,26 +1,4 @@
-import {definePlugin} from 'sanity'
+export {markdocSchemaType, type MarkdocDefinition} from './schema'
+export {MarkdocInput, defaultMdeTools, type MarkdocInputProps} from './components/MarkdocInput'
 
-interface MyPluginConfig {
-  /* nothing here yet */
-}
-
-/**
- * Usage in `sanity.config.ts` (or .js)
- *
- * ```ts
- * import {defineConfig} from 'sanity'
- * import {myPlugin} from 'sanity-plugin-markdoc'
- *
- * export default defineConfig({
- *   // ...
- *   plugins: [myPlugin()],
- * })
- * ```
- */
-export const myPlugin = definePlugin<MyPluginConfig | void>((config = {}) => {
-  // eslint-disable-next-line no-console
-  console.log('hello from sanity-plugin-markdoc')
-  return {
-    name: 'sanity-plugin-markdoc',
-  }
-})
+export {markdocSchema, type MarkdocConfig} from './plugin'
